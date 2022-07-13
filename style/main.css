@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', serif;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  font-size: 100%;
+  color: rgb(228, 228, 228);
+  background-color: rgb(17, 17, 17);
+}
+.app {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+.app-wrapper {
+  height: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  /* border-left: 1px solid salmon;
+  border-right: 1px solid salmon; */
+}
+.app-header {
+  padding: 15px 0;
+  height: auto;
+  width: 100%;
+  border-bottom: 1px solid rgb(49, 49, 49);
+}
+.app-list {
+  display: flex;
+}
+.app-column {
+  position: relative;
+  list-style: none;
+  border-right: 1px solid #313131;
+}
+.app-label {
+  display: none;
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  color: #970008;
+  font-size: 12px;
+}
+.app-name {
+  width: 20%;
+}
+.app-date {
+  width: 15%;
+}
+.app-type {
+  width: 35%;
+}
+.app-size {
+  width: 15%;
+}
+.app-link {
+  height: 100%;
+  display: inline-block;
+  padding: 15px 10px;
+  width: 100%;
+  cursor: pointer;
+  line-height: 1.3;
+  transition: 0.3s ease;
+}
+.app-link:hover {
+  background-color: #181818;
+}
+.app-link:active {
+  background-color: #141414;
+}
+.app-content {
+  width: 100%;
+}
+.app-content .app-list {
+  margin-top: 40px;
+  border-bottom: 1px solid rgb(49, 49, 49);
+}
+.app-content .app-column {
+  border: none;
+}
+@media (max-width: 1024px) {
+  .app-name {
+    width: 25%;
+  }
+  .app-date {
+    width: 10%;
+  }
+  .app-type {
+    width: 45%;
+  }
+  .app-size {
+    width: 10%;
+  }
+}
+@media (max-width: 768px) {
+  .app-list {
+    justify-content: space-between;
+  }
+  .app-link {
+    font-size: 14px;
+    padding: 10px 5px;
+  }
+}
+@media (max-width: 586px) {
+  .app-list {
+    flex-wrap: wrap;
+  }
+  .app-header .app-name,
+  .app-header .app-date,
+  .app-header .app-type,
+  .app-header .app-size {
+    width: 20%;
+    text-align: center;
+  }
+  .app-content .app-name,
+  .app-content .app-date,
+  .app-content .app-type,
+  .app-content .app-size {
+    width: 100%;
+    margin: 10px;
+  }
+  .app-label {
+    display: block;
+  }
+  .app-link {
+    padding: 10px;
+  }
+}
